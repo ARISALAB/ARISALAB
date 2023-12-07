@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ημερήσια Αναφορά</title>
+</head>
+<body>
+    <!-- Προσθήκη στην ενότητα <div class="container"> -->
+<div class="container">
+    
+    <button onclick="window.location.href='index.html'">Αρχική Σελίδα</button>
+<button onclick="window.location.href='weekly-report.html'">Εβδομαδιαία Αναφορά</button>
+
+    <h1>Ημερήσια Αναφορά</h1>
+
+    <label for="reportDate">Επιλέξτε ημερομηνία:</label>
+    <input type="date" id="reportDate">
+    
+    <button onclick="generateDailyReport()">Εμφάνιση Αναφοράς</button>
+    
+
+   
+
+    <table class="data-table" id="dailyReportTable">
+        <caption>Ημερήσια Αναφορά</caption>
+        <thead>
+            <tr>
+                <th>Είδος</th>
+                <th>Ποσό (€)</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

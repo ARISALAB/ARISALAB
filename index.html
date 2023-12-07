@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Οικονομικός Έλεγχος Εστιατορίου</title>
+   
+</head>
+<body>
+    
+    <div class="container">
+        
+<button onclick="window.location.href='index.html'">Αρχική Σελίδα</button>
+<button onclick="window.location.href='daily-report.html'">Ημερήσια Αναφορά</button>
+<button onclick="window.location.href='weekly-report.html'">Εβδομαδιαία Αναφορά</button>
+        <h1>Οικονομικός Έλεγχος Εστιατορίου</h1>
+        
+
+    
+        <label for="datepicker">Επιλέξτε ημερομηνία:</label>
+        <input type="date" id="datepicker">
+        <p id="selectedDateLabel">Ημερομηνία:</p>
+        <button id="saveButton" onclick="saveData()">Αποθήκευση Δεδομένων</button>
+    </div>
+
+    <div class="data-tables">
+        <div class="income-table">
+            <h2>Πίνακας Εσόδων</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Είδος Εσόδων</th>
+                        <th>Ποσότητα</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Μετρητά</td>
+                        <td><input type="number" id="cashIncome" oninput="calculateTotalIncome()"></td>
+                    </tr>
+                    <tr>
+                        <td>Κάρτες</td>
+                        <td><input type="number" id="cardIncome" oninput="calculateTotalIncome()"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Σύνολο Εσόδων</strong></td>
+                        <td id="totalIncome">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="expense-table">
+            <h2>Πίνακας Εξόδων</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Είδος Εξόδων</th>
+                        <th>Ποσότητα</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Μετρητά</td>
+                        <td><input type="number" id="cashExpense" oninput="calculateTotalExpense()"></td>
+                    </tr>
+                    <tr>
+                        <td>Κάρτες</td>
+                        <td><input type="number" id="cardExpense" oninput="calculateTotalExpense()"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Σύνολο Εξόδων</strong></td>
+                        <td id="totalExpense">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="summary-table">
+            <h2>Σύνολα</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Τύπος</th>
+                        <th>Σύνολο</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Μετρητά</td>
+                        <td id="totalCash">0</td>
+                    </tr>
+                    <tr>
+                        <td>Κάρτες</td>
+                        <td id="totalCard">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Προσθήκη πίνακα για τα αποθηκευμένα δεδομένα -->
+    <div class="saved-data-table">
+        <h2>Αποθηκευμένα Δεδομένα</h2>
+        <table id="savedDataTable">
+            <thead>
+                <tr>
+                    <th>Ημερομηνία</th>
+                    <th>Έσοδα (Μετρητά)</th>
+                    <th>Έσοδα (Κάρτες)</th>
+                    <th>Σύνολο Εσόδων</th>
+                    <th>Έξοδα (Μετρητά)</th>
+                    <th>Έξοδα (Κάρτες)</th>
+                    <th>Σύνολο Εξόδων</th>
+                    <th>Συνολικά Μετρητά</th>
+                    <th>Συνολικές Κάρτες</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+   <!-- ... Υπόλοιπος κώδικας ... -->
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
